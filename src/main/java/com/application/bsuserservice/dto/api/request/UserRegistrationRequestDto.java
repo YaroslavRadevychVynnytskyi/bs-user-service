@@ -1,4 +1,4 @@
-package com.application.bsuserservice.dto;
+package com.application.bsuserservice.dto.api.request;
 
 public record UserRegistrationRequestDto(
         String email,

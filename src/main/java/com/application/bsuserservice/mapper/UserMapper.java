@@ -1,8 +1,8 @@
 package com.application.bsuserservice.mapper;
 
 import com.application.bsuserservice.config.MapperConfig;
-import com.application.bsuserservice.dto.UserRegistrationRequestDto;
 import com.application.bsuserservice.dto.UserResponseDto;
+import com.application.bsuserservice.dto.api.request.UserRegistrationRequestDto;
 import com.application.bsuserservice.model.User;
 import org.mapstruct.Mapper;
 

@@ -1,7 +1,7 @@
 package com.application.bsuserservice.service.impl;
 
-import com.application.bsuserservice.dto.UserRegistrationRequestDto;
 import com.application.bsuserservice.dto.UserResponseDto;
+import com.application.bsuserservice.dto.api.request.UserRegistrationRequestDto;
 import com.application.bsuserservice.mapper.UserMapper;
 import com.application.bsuserservice.model.Role;
 import com.application.bsuserservice.model.User;
@@ -33,5 +33,10 @@ public class UserServiceImpl implements UserService {
     public Optional<UserResponseDto> findByUsername(String username) {
         User user = userRepository.findByEmail(username);
         return Optional.ofNullable(userMapper.toDto(user));
+    }
+
+    @Override
+    public UserResponseDto findById(Long userId) {
+        return userMapper.toDto(userRepository.findById(userId).orElseThrow());
     }
 }
